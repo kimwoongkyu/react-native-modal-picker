@@ -33,7 +33,8 @@ const propTypes = {
     cancelStyle: View.propTypes.style,
     cancelTextStyle: Text.propTypes.style,
     overlayStyle: View.propTypes.style,
-    cancelText: PropTypes.string
+    cancelText: PropTypes.string,
+    animationType: PropTypes.string,
 };
 
 const defaultProps = {
@@ -49,7 +50,8 @@ const defaultProps = {
     cancelStyle: {},
     cancelTextStyle: {},
     overlayStyle: {},
-    cancelText: 'cancel'
+    cancelText: 'cancel',
+    animationType: 'slide'
 };
 
 export default class ModalPicker extends BaseComponent {
@@ -66,7 +68,7 @@ export default class ModalPicker extends BaseComponent {
         );
 
         this.state = {
-            animationType: 'slide',
+            animationType: this.props.animationType ? this.props.animationType : 'slide',
             modalVisible: false,
             transparent: false,
             selected: 'please select'
