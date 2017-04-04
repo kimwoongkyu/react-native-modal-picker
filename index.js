@@ -56,7 +56,7 @@ const defaultProps = {
 
 export default class ModalPicker extends BaseComponent {
 
-    constructor() {
+    constructor(props) {
 
         super(props);
 
@@ -68,7 +68,7 @@ export default class ModalPicker extends BaseComponent {
         );
 
         this.state = {
-            animationType: this.props.animationType ? this.props.animationType : 'slide',
+            animationType: props.animationType ? props.animationType : 'slide',
             modalVisible: false,
             transparent: false,
             selected: 'please select'
