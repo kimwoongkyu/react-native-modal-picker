@@ -58,7 +58,7 @@ export default class ModalPicker extends BaseComponent {
 
     constructor() {
 
-        super();
+        super(props);
 
         this._bind(
             'onChange',
