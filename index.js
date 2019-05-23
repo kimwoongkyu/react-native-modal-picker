@@ -22,7 +22,7 @@ const propTypes = {
     data: PropTypes.array,
     onChange: PropTypes.func,
     initValue: PropTypes.string,
-    style: View.propTypes.style,
+    //style: View.propTypes.style,
     selectStyle: View.propTypes.style,
     optionStyle: View.propTypes.style,
     optionTextStyle: Text.propTypes.style,
